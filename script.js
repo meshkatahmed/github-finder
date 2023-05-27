@@ -1,5 +1,6 @@
 let searchBtn = document.querySelector('#searchBtn');
 let searchUser = document.querySelector('#searchUser');
+let ui = new UI();
 
 searchBtn.addEventListener('click',(e) => {
     let userText = searchUser.value;
@@ -12,6 +13,7 @@ searchBtn.addEventListener('click',(e) => {
                 // show alert
             } else {
                 // show profile
+                ui.showProfile(data);
             }
         })
     } else {
